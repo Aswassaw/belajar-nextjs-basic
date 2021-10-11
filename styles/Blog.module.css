@@ -8,7 +8,7 @@
 .card-item {
   margin: 10px;
   padding: 8px;
-  min-width: 275px;
+  max-width: 40vw;
   background-color: rgb(245, 244, 244);
   border-radius: 3px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
@@ -16,4 +16,10 @@
 
 .link {
   color: rgb(38, 114, 255);
+}
+
+@media (max-width: 700px) {
+  .card-item {
+    max-width: 80vw;
+  }
 }

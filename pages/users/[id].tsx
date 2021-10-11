@@ -12,8 +12,16 @@ const Detail = (props: DetailProps) => {
       <h1>
         Detail Page
       </h1>
-      <p>{user.name}</p>
-      <p>{user.email}</p>
+      <p>
+        <strong>Name:</strong>
+        {' '}
+        {user.name}
+      </p>
+      <p>
+        <strong>Email:</strong>
+        {' '}
+        {user.email}
+      </p>
     </Layout>
   );
 };
@@ -34,7 +42,7 @@ export async function getStaticPaths() {
 
   return {
     paths,
-    fallback: true,
+    fallback: false,
   };
 }
 
