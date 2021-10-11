@@ -1,0 +1,18 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  justify-content: space-evenly;
+}
+
+.card-item {
+  margin: 5px;
+  padding: 8px;
+  min-width: 275px;
+  background-color: rgb(231, 230, 230);
+  border-radius: 3px;
+}
+
+.link {
+  color: rgb(38, 114, 255);
+}
