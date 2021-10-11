@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { useRouter } from 'next/router';
 import styles from '../../styles/User.module.css';
 import Layout from '../../components/Layout';
 
@@ -7,7 +7,12 @@ interface UserProps {
 }
 
 const Users = (props: UserProps) => {
+  const router = useRouter();
   const { dataUsers } = props;
+
+  const onClickHandler = (id: number | string): void => {
+    router.push(`/users/${id}`);
+  };
 
   return (
     <Layout title="Next.js Basic | User Page">
@@ -27,12 +32,10 @@ const Users = (props: UserProps) => {
               <strong>Website: </strong>
               <a className={styles.link} href={`https://${user.website}`} target="_blank" rel="noreferrer">Website</a>
             </p>
+            <button type="button" onClick={() => onClickHandler(user.id)}>Detail</button>
           </div>
         ))}
       </div>
-      <button type="button">
-        <Link href="/users/1">Detail</Link>
-      </button>
     </Layout>
   );
 };
